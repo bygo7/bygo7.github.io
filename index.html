@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>Bygo's personal Webpage</title>
 
   <!--
     - favicon
@@ -30,27 +30,31 @@
   <!--
     - #MAIN
   -->
-
+  
   <main>
 
     <!--
       - #SIDEBAR
     -->
 
-    <aside class="sidebar" data-sidebar>
+    <aside class="sidebar" data-sidebar id="Home">
 
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+          <img src="./assets/images/Profile Image - Byeongyong Go.jpg" alt="Byeongyong Go" width="80" >
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
+          <h1 class="name" title="Byeongyong Go">Byeongyong (B.Y.) Go</h1>
 
-          <p class="title">Web developer</p>
+          <p class="title">MSCS @ Georgia Tech</p>
         </div>
-
+        <div class="info-button">
+          <a download="" href="assets/pdf/Resume_Byeongyong_Go.pdf" class="download-btn">
+            Download CV<img src="./assets/images/download-outline.svg" width="20" class="filter-yellow" width="50%" display="block" margin-left="auto" margin-right="auto">
+          </a>
+        </div>
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
 
@@ -68,41 +72,42 @@
           <li class="contact-item">
 
             <div class="icon-box">
+              <ion-icon name="logo-github"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Github</p>
+
+              <a href="https://github.com/bygo7" class="contact-link">github.com/bygo7</a>
+
+            </div>
+
+          </li>
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Linkedin</p>
+
+              <a href="https://www.linkedin.com/in/byeongyong-go-b61604185/" class="contact-link">linkedin.com/byeongyong-go</a>
+            </div>
+
+          </li>
+
+
+          <li class="contact-item">
+
+            <div class="icon-box">
               <ion-icon name="mail-outline"></ion-icon>
             </div>
 
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 23, 1982</time>
+              <a href="mailto:bygo777@gmail.com" class="contact-link">bygo777@gmail.com</a>
             </div>
 
           </li>
@@ -116,14 +121,14 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>Sacramento, California, USA</address>
+              <address>Atlanta, Georgia, USA</address>
             </div>
 
           </li>
 
         </ul>
 
-        <div class="separator"></div>
+        <!-- <div class="separator"></div>
 
         <ul class="social-list">
 
@@ -145,7 +150,7 @@
             </a>
           </li>
 
-        </ul>
+        </ul> -->
 
       </div>
 
@@ -170,24 +175,38 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <a href="#Home" class="navbar-link active">
+              <button class="navbar-link" data-nav-link>Home</button>
+            </a>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <a href="#History" class="navbar-link">
+              <button class="navbar-link" data-nav-link>History</button>
+            </a>
           </li>
 
-          <li class="navbar-item">
+          <!-- <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
+          </li> -->
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <a href="#Contact" class="navbar-link">
+              <button class="navbar-link" data-nav-link>Contact</button>
+            </a>
           </li>
+
+          <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>
+              Download 
+              <img src="./assets/images/download-outline.svg
+              " width="20" class="filter-yellow">
+            </button>
+          </li> -->
 
         </ul>
 
@@ -204,22 +223,19 @@
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">About me</h2>
+          <h2 class="h2 article-title" id="About">About me</h2>
         </header>
 
-        <section class="about-text">
+        <section class="about-text" >
           <p>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-            I enjoy
-            turning complex problems into simple, beautiful and intuitive designs.
+            I love solving problems, especially in computer systems domain. 
           </p>
 
           <p>
-            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. I created web design for many famous brand companies.
+            I worked as a .. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur reprehenderit officia magnam quaerat minus, eveniet quo? Delectus ea officia dignissimos soluta ratione praesentium dolore sit omnis quibusdam architecto at quisquam blanditiis quidem quo nam nulla, temporibus vero mollitia laboriosam beatae itaque nemo quas maxime! Praesentium ullam voluptatem reprehenderit voluptatibus impedit.
+          </p>
+          <p>
+            I am now a grad student .. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem atque nihil sint. Nulla possimus ea ut unde eum eos distinctio cumque. Iure iusto libero veniam! Officia similique blanditiis officiis vel magni nostrum nihil nobis quasi cupiditate autem quae architecto maiores, voluptas velit eveniet perspiciatis vitae numquam magnam doloremque laborum iste!
           </p>
         </section>
 
@@ -237,15 +253,18 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
+                <!-- <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40"> -->
+                <img src="./assets/images/research-svgrepo-com.svg
+                " alt="design icon" width="40" class="filter-yellow">
+                <!-- <ion-icon name="newspaper-outline"   --ionicon-stroke-width= 16px></ion-icon> -->
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
+                <h4 class="h4 service-item-title">Research</h4>
 
                 <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
+                  Microarchitectural Side-Channel Research, advised by Prof. Daniel Genkin
                 </p>
               </div>
 
@@ -258,16 +277,16 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
+                <h4 class="h4 service-item-title">Development</h4>
 
                 <p class="service-item-text">
-                  High-quality development of sites at the professional level.
+                  OS/Kernel level development, mainly using C++
                 </p>
               </div>
 
             </li>
 
-            <li class="service-item">
+            <!-- <li class="service-item">
 
               <div class="service-icon-box">
                 <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
@@ -281,19 +300,19 @@
                 </p>
               </div>
 
-            </li>
+            </li> -->
 
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+                <img src="./assets/images/weightlifting-svgrepo-com.svg" alt="workout icon" width="40" class="filter-yellow">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
+                <h4 class="h4 service-item-title">Workout</h4>
 
                 <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
+                  One of my favorite quote "Sound body, Sound mind".
                 </p>
               </div>
 
@@ -304,11 +323,11 @@
         </section>
 
 
-        <!--
+        <!-- 
           - testimonials
         -->
 
-        <section class="testimonials">
+        <!-- <section class="testimonials">
 
           <h3 class="h3 testimonials-title">Testimonials</h3>
 
@@ -404,14 +423,14 @@
 
           </ul>
 
-        </section>
+        </section> -->
 
 
         <!--
           - testimonials modal
         -->
 
-        <div class="modal-container" data-modal-container>
+        <!-- <div class="modal-container" data-modal-container>
 
           <div class="overlay" data-overlay></div>
 
@@ -449,13 +468,13 @@
 
           </section>
 
-        </div>
+        </div>  -->
 
 
         <!--
           - clients
         -->
-
+<!-- 
         <section class="clients">
 
           <h3 class="h3 clients-title">Clients</h3>
@@ -500,9 +519,9 @@
 
           </ul>
 
-        </section>
+        </section> -->
 
-      </article>
+      <!-- </article>  -->
 
 
 
@@ -512,13 +531,13 @@
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+      <!-- <article class="resume" data-page="resume"> -->
 
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="h2 article-title" id="History">History</h2>
         </header>
 
-        <section class="timeline">
+        <section class="timeline" >
 
           <div class="title-wrapper">
             <div class="icon-box">
@@ -633,7 +652,7 @@
 
         </section>
 
-        <section class="skill">
+        <!-- <section class="skill">
 
           <h3 class="h3 skills-title">My skills</h3>
 
@@ -693,8 +712,47 @@
 
           </ul>
 
+        </section> -->
+
+        <header>
+          <h2 class="h2 article-title" id="Contact">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox >
+          <figure>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.071323337326!2d-84.39857790767297!3d33.77560308409008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5048aebc34fe3%3A0xb52ad03e3ad8c50f!2sGeorgia%20Institute%20of%20Technology!5e0!3m2!1sen!2sus!4v1671742231496!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" width="400" height="300" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22154.4367158313!2d-84.39892938567007!3d33.781769225802854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5045d6993098d%3A0x66fede2f990b630b!2sAtlanta%2C%20GA!5e0!3m2!1sen!2sus!4v1671742160622!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            <!-- <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe> -->
+          </figure>
         </section>
 
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Me</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+        
       </article>
 
 
@@ -705,7 +763,7 @@
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio">
+      <!-- <article class="portfolio" data-page="portfolio">
 
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
@@ -935,7 +993,7 @@
 
         </section>
 
-      </article>
+      </article> -->
 
 
 
@@ -945,7 +1003,7 @@
         - #BLOG
       -->
 
-      <article class="blog" data-page="blog">
+      <!-- <article class="blog" data-page="blog">
 
         <header>
           <h2 class="h2 article-title">Blog</h2>
@@ -1127,7 +1185,7 @@
 
         </section>
 
-      </article>
+      </article> -->
 
 
 
@@ -1137,7 +1195,7 @@
         - #CONTACT
       -->
 
-      <article class="contact" data-page="contact">
+      <!-- <article class="contact" data-page="contact">
 
         <header>
           <h2 class="h2 article-title">Contact</h2>
@@ -1174,12 +1232,12 @@
 
         </section>
 
-      </article>
+      </article> -->
+      
 
     </div>
 
   </main>
-
 
 
 

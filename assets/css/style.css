@@ -153,7 +153,10 @@ input, textarea {
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
-html { font-family: var(--ff-poppins); }
+html { 
+  font-family: var(--ff-poppins); 
+  scroll-behavior: smooth;
+}
 
 body { background: var(--smoky-black); }
 
@@ -354,6 +357,20 @@ main {
   border-radius: 8px;
 }
 
+.download-btn {
+  position: relative;
+  top: 10%;
+  right: 10%;
+  border-radius: 15px;
+  font-size: 13px;
+  color: var(--orange-yellow-crayola);
+  background: var(--border-gradient-onyx);
+  padding: 10px;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+  z-index: 1;
+}
+
 .info_more-btn {
   position: absolute;
   top: -15px;
@@ -506,6 +523,9 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
+.filter-yellow {
+  filter: invert(94%) sepia(50%) saturate(1819%) hue-rotate(310deg) brightness(110%) contrast(105%);
+}
 
 
 /**
@@ -1379,6 +1399,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .navbar-link { --fs-8: 14px; }
 
+  .navbar-link-resumedownload { --fs-8: 14px; }
+
 
 
   /**
@@ -1872,6 +1894,20 @@ textarea.form-input::-webkit-resizer { display: none; }
   .social-list { justify-content: center; }
 
 
+/* scroll-to-top */
+  .scroll-to-top{
+    display: none;
+    position:fixed;
+    bottom:0px;
+    right:0px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+  .scroll-to-top.active{
+    display: block;
+    animation: fade 0.5s ease backwards;  
+  }
 
   /**
 	 * RESUME

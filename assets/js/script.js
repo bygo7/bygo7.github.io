@@ -157,3 +157,34 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// scroll to section
+const sections = document.querySelectorAll('h2[id]') +  document.querySelectorAll('aside[id]');
+
+function scrollActive(){
+  const scrollY = window.pageYOffset;
+
+  sections.forEach(current =>{
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute('id');
+
+    if(scrollY > sectionTop && scrollY <= sctionTop + sectionHeight){
+      document.querySelectorAll('.navbar-link button[href*=' + sectionId + ']').classList.add('active');
+    }else{
+      document.querySelectorAll('.navbar-link a[href*=' + sectionId + ']').classList.remove('active');
+    }
+  })
+}
+window.addEventListener('scroll', scrollActive)
+
+// scroll to top
+const toTop = document.querySelector(".scroll-to-top");
+
+window.addEventListener("scroll", () =>{
+  if(window.pageYOffset > 100){
+    toTop.classList.add("active");
+  } else{
+    toTop.classList.remove("active");
+  }
+})
