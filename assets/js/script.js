@@ -1,3 +1,25 @@
+// import smoothscroll from 'smoothscroll-polyfill';
+
+
+history.scrollRestoration = "manual";
+
+$(window).on('beforeunload', function(){
+      $(window).scrollTop(0);
+});
+
+// function scrollToBottom() {
+//   window.scrollTo(0, document.body.scrollHeight);
+// }
+// function scrollToTop() {
+//   window.scrollTo(0, 0);
+// }
+// history.scrollRestoration = "manual";
+// window.onload = scrollToTop;
+// window.scrollTo(0, 0);
+
+// kick off the polyfill!
+// smoothscroll.polyfill();
+
 'use strict';
 
 

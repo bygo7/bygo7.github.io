@@ -69,6 +69,7 @@
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
+  --light-green: #AFE1AF;
   /**
    * typography
    */
@@ -125,7 +126,9 @@
   box-sizing: border-box;
 }
 
-a { text-decoration: none; }
+a { 
+  text-decoration: none;
+}
 
 li { list-style: none; }
 
@@ -371,6 +374,26 @@ main {
   z-index: 1;
 }
 
+
+.download-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--bg-gradient-jet);
+  transition: var(--transition-1);
+  z-index: -1;
+}
+
+.download-btn:hover,
+.download-btn:focus { background: var(--bg-gradient-yellow-1); }
+
+.download-btn:hover::before,
+.download-btn:focus::before { background: var(--bg-gradient-yellow-2); }
+
+.download-btn span { display: none; }
+
+
 .info_more-btn {
   position: absolute;
   top: -15px;
@@ -502,7 +525,10 @@ main {
 .navbar-link:hover,
 .navbar-link:focus { color: var(--light-gray-70); }
 
-.navbar-link.active { color: var(--orange-yellow-crayola); }
+.navbar-link.active { 
+  color: var(--orange-yellow-crayola);
+  scroll-behavior: smooth;
+ }
 
 
 
@@ -525,8 +551,43 @@ main {
 
 .filter-yellow {
   filter: invert(94%) sepia(50%) saturate(1819%) hue-rotate(310deg) brightness(110%) contrast(105%);
+  margin-left:auto;
+  margin-right:auto;
 }
 
+/* .contact-info :is(.contact-link, time, address) {
+  color: var(--white-2);
+  font-size: var(--fs-7);
+} */
+/* <p style="border-bottom:1px solid black;">1 pixel, solid, black...</p>
+<p style="border-bottom:1px dotted black;">1 pixel, dotted, black...</p>
+<p style="border-bottom:10px double orange;">10 pixels, double orange...</p>
+<p style="border-bottom:1px dashed green;">1 pixel, dashed green...</p> */
+
+
+.about-text :is(.aboutme-link){
+  display:inline;
+  white-space: nowrap;
+  text-decoration:underline;
+  border-bottom:1px dashed var(--light-green);
+  color: var(--light-green);
+  font-size: var(--fs-7);
+  text-decoration-line: none;
+}
+.aboutme-link::before{
+  /* color: #99cc00; */
+  color: var(--white-2);
+}
+.aboutme-link:hover,
+.aboutme-link:focus { 
+  /* background: var(--bg-gradient-yellow-1);  */
+  color: var(--white-2);
+  text-decoration:none;
+  border-bottom:none;
+}
+
+/* .info_more-btn:hover::before,
+.info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); } */
 
 /**
  * #service 
