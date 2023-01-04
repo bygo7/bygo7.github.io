@@ -586,8 +586,8 @@ main {
   border-bottom:none;
 }
 
-/* .info_more-btn:hover::before,
-.info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); } */
+.info_more-btn:hover::before,
+.info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
 
 /**
  * #service 
@@ -1975,5 +1975,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 */
 
   .timeline-text { max-width: 700px; }
+
 
 }
